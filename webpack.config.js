@@ -6,12 +6,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   devtool: 'inline-source-map',
   entry: {
-    main: './src/index.js'
+    main: './src/pages/app.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
-    publicPath: ''
+    filename: 'bundle.js',
+     path: path.resolve(__dirname, 'dist'),
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
   },
   target: ['web', 'es5'],
   stats: { children: true },
@@ -47,8 +51,8 @@ module.exports = {
       },
       {
         // rule for processing files
-        test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
-        type: "asset/resource"
+        test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/i,
+        type: "asset/resource",
       },
     ]
   },

@@ -1,0 +1,154 @@
+.form-moving-quote {
+  max-width: 800px;
+}
+
+.form-step__title, .form-step__description {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-step__moving-list-types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 100%;
+}
+
+.form-step__moving-type {
+  min-height: 120px;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.fieldset {
+  display: flex;
+  column-gap: 15px;
+  margin-block-end: 40px;
+}
+
+.fieldset:last-of-type {
+  margin: 0;
+}
+
+.legend__title {
+  font-size: 1.1rem;
+}
+
+.legend__description {
+  font-size: .9rem;
+}
+.form-moving-quote__stations-options {
+  display: flex;
+  column-gap: 15px;
+}
+
+.form-moving-quote__address {
+  display: grid;
+  grid-template-columns: minmax(140px, 22.5%) minmax(180px, 30%) repeat(4, minmax(60px, 10%));
+  column-gap: 1.5%;
+  row-gap: 10px;
+}
+
+.fieldset__title {
+  margin-inline-end: 10px;
+  margin-block-end: 15px;
+  font-size: .8rem;
+  line-height: 2;
+  font-weight: bold;
+}
+
+.fieldset__elevator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  height: 40px;
+}
+
+.label_input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fieldset__access-route-container {
+  grid-column: span 2;
+}
+
+.fieldset__access-route {
+  display: flex;
+  gap: 5px;
+  height: 40px;
+  align-items: center;
+}
+
+.fieldset__select {
+  display: inline;
+  width: 80px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fieldset__span {
+  width: max-content;
+}
+
+.form-moving-quote__buttons {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 25%;
+  width: 100%;
+}
+
+
+.transport-items-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.transport-item {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.transport-item__image {
+  width: 25%;
+  height: 100%;
+  padding: 5px;
+  object-fit: cover;
+  border-radius: 5px;
+
+}
+
+.transport-item__description {
+  width: 65%;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: .8rem;
+}
+
+.transport-item__title {
+  grid-column: span 3;
+  font-weight: 800;
+  font-size: .9rem;
+  margin-block-end: 10px;
+}
+
+.transport-item__sizes-list {
+  grid-column: span 3;
+  font-weight: 700;
+}
+
+.transport-item__icon {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 5px 0 0 5px;
+}

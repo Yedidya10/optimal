@@ -4,21 +4,231 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Document</title>
+    <title>OPTIMAL MOVING</title>
   </head>
-  <body>
-    <div>
-      <form>
-        <input type="text" name="name" placeholder="שם מלא" />
-        <input type="text" name="email" placeholder="אימייל" />
-        <input type="text" name="phone" placeholder="טלפון" />
-        <input type="text" name="address" placeholder="כתובת" />
-        <input type="text" name="city" placeholder="עיר" />
-        <input type="text" name="state" placeholder="מדינה" />
-        <input type="text" name="zip" placeholder="מיקוד" />
-        <input type="submit" value="שלח" />
-      </form>
-    </div>
+  <body class="body">
+    <form class="form form-moving-quote">
+      <div class="form-step">
+        <h2 class="form-step__title">טופס הצעת מחיר</h2>
+        <p class="form-step__description">
+          לקבלת הצעת מחיר להובלה קטנה במספר קליקים - נא למלא טופס זה
+        </p>
+        <fieldset class="fieldset">
+          <legend class="legend">
+            <h3 class="legend__title">איזה הובלה צריכים?</h3>
+            <p class="legend__description">נא לבחור את סוג ההובלה הנדרשת:</p>
+          </legend>
+          <ul class="form-step__moving-list-types">
+            <li>
+              <button class="button form-step__moving-type" type="button">הובלה מנקודת מוצא לנקודת יעד</button>
+            </li>
+            <li><button class="button form-step__moving-type" type="button">הובלה מרובת יעדים</button></li>
+            <li><button class="button form-step__moving-type" type="button">שינוע בלבד (ללא סבלות)</button></li>
+            <li>
+              <button class="button form-step__moving-type" type="button">פינוי בלבד (פינוי לאשפה)</button>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="form-step">
+        <h2 class="form-step__title">תחנת מוצא</h2>
+        <fieldset class="fieldset">
+          <legend class="legend">
+            <h3 class="legend__title">מה בתחנה?</h3>
+            <p class="legend__description">
+              נא לסמן את סוג העבודה הנדרשת בתחנה זאת:
+            </p>
+          </legend>
+          <div class="form-moving-quote__stations-options fieldset">
+            <label class="label label_input">
+              <input class="input" type="checkbox" name="station-type" id="" />
+              <span>העמסה</span>
+            </label>
+            <label class="label label_input">
+              <input class="input" type="checkbox" name="station-type" id="" />
+              <span>פריקה</span>
+            </label>
+            <label class="label label_input">
+              <input class="input" type="checkbox" name="station-type" id="" />
+              <span>פינוי</span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset form-moving-quote__address">
+          <legend class="legend">
+            <h3 class="legend__title">כתובת</h3>
+            <p class="legend__description">
+              נא להזין את הכתובת המלאה בתחנה זאת:
+            </p>
+          </legend>
+          <label class="label"
+            ><span class="span fieldset__title">יישוב</span>
+            <input
+              class="input fieldset__city"
+              type="text"
+              name="city"
+              required
+            />
+          </label>
+          <label class="label"
+            ><span class="span fieldset__title">רחוב</span>
+            <input
+              class="input fieldset__street"
+              type="text"
+              name="street"
+              required
+            />
+          </label>
+          <label class="label"
+            ><span class="span fieldset__title">בית</span>
+            <input
+              class="input fieldset__house"
+              type="text"
+              name="house"
+              required
+            />
+          </label>
+          <label class="label"
+            ><span class="span fieldset__title">כניסה</span>
+            <input
+              class="input fieldset__entrance"
+              type="text"
+              name="entrance"
+            />
+          </label>
+          <label class="label"
+            ><span class="span fieldset__title">דירה</span>
+            <input
+              class="input fieldset__apartment"
+              type="number"
+              name="apartment"
+            />
+          </label>
+          <label class="label"
+            ><span class="span fieldset__title">קומה</span>
+            <input
+              class="input fieldset__floor"
+              type="number"
+              name="floor"
+              required
+            />
+          </label>
+          <div>
+            <span class="span fieldset__title">מעלית</span>
+            <div class="fieldset__elevator">
+              <label class="label label_input">
+                <input
+                  class="input"
+                  type="radio"
+                  name="elevator"
+                  value="true"
+                />
+                <span>יש</span>
+              </label>
+              <label class="label label_input">
+                <input
+                  class="input"
+                  type="radio"
+                  name="elevator"
+                  value="false"
+                />
+                <span>אין</span>
+              </label>
+            </div>
+          </div>
+          <div class="fieldset__access-route-container">
+            <span class="span fieldset__title">שביל גישה</span>
+            <div class="fieldset__access-route">
+              <select class="select fieldset__select" required>
+                <option class="option"></option>
+                <option class="option">1-10</option>
+                <option class="option">11-20</option>
+                <option class="option">21-30</option>
+                <option class="option">31-40</option>
+                <option class="option">41-50</option>
+              </select>
+              <span class="fieldset__span"> מטר, ו</span>
+              <select class="select fieldset__select" required>
+                <option class="option"></option>
+                <option class="option">0-5</option>
+                <option class="option">6-10</option>
+                <option class="option">11-20</option>
+                <option class="option">21-30</option>
+                <option class="option">31-40</option>
+              </select>
+              <span class="fieldset__span">מדרגות</span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset form-moving-quote__buttons">
+          <button class="button" type="button">לשלב הקודם</button>
+          <button class="button button_reset" type="reset">מחק טופס</button>
+          <button class="button" type="button">לשלב הבא</button>
+        </fieldset>
+      </div>
+      <div class="form-step">
+        <h2 class="form-step__title">רשימת פריטים להעמסה</h2>
+        <p class="form-step__description">
+          רשימת הפריטים שיש להעמיס בכתובת <span>יפו 118, ירושלים</span>
+        </p>
+        <fieldset class="fieldset">
+          <legend class="legend">
+            <h3 class="legend__title">חיפוש פריט</h3>
+            <p class="legend__description">
+              להוספת פריט לרשימה יש להקליד בתיבת החיפוש:
+            </p>
+          </legend>
+          <input class="input" type="search" name="" id="" placeholder="לדוגמא: מקרר">
+        </fieldset>
+        
+        <div class="transport-items-list">
+          <div class="transport-item">
+            <img class="transport-item__image" src="./images/מקרר.png" alt="">
+            <div class="transport-item__description">
+              <h4 class="transport-item__title">מקרר סטנדרטי</h4>
+              <span class="transport-item__sizes-list">מידות:</span>
+              <p class="transport-item__size-title">עומק:</p>
+              <p>רוחב:</p>
+              <p>גובה:</p>
+              <p class="transport-item__size-number">50-60 ס"מ</p>
+              <p class="transport-item__size-number">50-80 ס"מ</p>
+              <p class="transport-item__size-number">150-160 ס"מ</p>
+            </div>
+            <button type="button" class="button transport-item__icon">
+              +
+            </button>
+          </div>
+          <template class="transport-item-template">
+            <div class="transport-item">
+              <img class="transport-item__image" src="./images/מקרר.png" alt="">
+              <div class="transport-item__description">
+                <h4 class="transport-item__title">מקרר סטנדרטי</h4>
+                <span class="transport-item__sizes-list">מידות:</span>
+                <p class="transport-item__size-title">עומק:</p>
+                <p>רוחב:</p>
+                <p>גובה:</p>
+                <p class="transport-item__size-number">50-60 ס"מ</p>
+                <p class="transport-item__size-number">50-80 ס"מ</p>
+                <p class="transport-item__size-number">150-160 ס"מ</p>
+              </div>
+              <button type="button" class="button transport-item__icon">
+                +
+              </button>
+            </div>
+          </template>
+          <template>
+            <dialog class="dialog" open>
+              <div class="dialog__content">
+                <button class="button close-dialog" type="button">x</button>
+                <p>Greetings, one and all!</p>
+                <form class="form" method="dialog">
+                  <button class="button" type="button">OK</button>
+                </form>
+              </div>
+            </dialog>
+          </template>
+        </div>
+      </div>
+    </form>
   </body>
 </html>
